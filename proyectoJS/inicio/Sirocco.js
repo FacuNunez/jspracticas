@@ -1,5 +1,5 @@
 //array con los productos
-const productos = [
+/* const productos = [
     { id: 1, nombre: "1/4 kg", precio: 750 },
     { id: 2, nombre: "1/2 kg", precio: 1500 },
     { id: 3, nombre: "1 kg", precio: 3000 },
@@ -51,4 +51,6 @@ if (bienvenida === "si" || bienvenida === "SI") {
     }
 } else {
     alert("Gracias por visitarnos!!");
-}
+} 
+ */
+

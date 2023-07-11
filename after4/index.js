@@ -85,3 +85,51 @@ carritoLleno.addEventListener("click", () => console.log(carrito));
 //BUSCADOR
 botonBuscar.addEventListener("click", () => buscarProducto(inputAfter.value));
 
+/* //EVENTO
+//el evento va a funcionar sobre un nodo, si dos nodos tiene el mismo id, va a funcionar sobre uno solo
+const comprarProducto = (producto) => {
+  let productoExiste = carrito.find(item => item.id === producto.id);
+  if (productoExiste !== undefined) {
+      productoExiste.precio = productoExiste.precio + producto.price;
+      productoExiste.cantidad = productoExiste.cantidad + 1
+  } else {
+      carrito.push({
+          id: producto.id,
+          nombre: producto.name,
+          precio: producto.price,
+          imagen: producto.image,
+          cantidad: 1
+      })
+  }
+  ;
+} 
+
+const producoEncontrado = (string) => {
+  console.log(string);
+  let productoBuscar = tienda.filter(producto => producto.name.includes(string))//al cambiar el find por el filter, lo q logro es que me traiga todo aquello que cumpla con la condicion, el find solo trae el primero
+  console.log(productoBuscar);
+}//se genera una funcion, la cual el parametro va a ser el string que le pasamos al input//y lo buscamos conun find dentro de la tienda que concida con los valores que se le ingresan al input//
+
+
+
+const guardarEmail = (e) => {
+  e.preventDefault()//evita que se actualice la pagina
+  let direccion = e.target.children[0].value;//guardo en una variable el valor del primer input
+  let mensaje = e.target.children[1].value;//guardo en otra el otro valor del input
+  email.push({//
+      direccion: direccion,
+      mensaje: mensaje,
+});//pusheo eel objeto al array vacio
+
+console.log(email);//muestro el array
+}
+
+
+
+carritoLleno.addEventListener("click", () => console.log(carrito));
+
+
+buscar.addEventListener("click", () => producoEncontrado(productoBuscado.value));//se le genera un escuchador de eventos al boton Buscar, se le pasa por parametro la funcion creada para buscar, y el parametro son los valores que se ingresen en el input
+
+
+formulario.addEventListener("submit", (e) => guardarEmail(e)); */
